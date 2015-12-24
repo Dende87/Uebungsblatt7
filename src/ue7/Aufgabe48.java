@@ -17,7 +17,7 @@ public class Aufgabe48 {
 			char sign = IO.readChar(
 					"Runde " + (i + 1) + ". Bisher geraten " + getPlayerWord() + ". Was wählst du für ein Zeichen?");
 			addWord(sign);
-			if (checkVictory()) {
+			if (getPlayerWord().equals(getSecretWord())) {
 				victoryFlag = true;
 				break;
 			}
@@ -30,15 +30,6 @@ public class Aufgabe48 {
 			IO.println("Tja, das war wohl nichts ;)");
 		}
 
-	}
-
-	private static boolean checkVictory() {
-
-		if (getPlayerWord().equals(getSecretWord())) {
-			return true;
-		}
-
-		return false;
 	}
 
 	private static String getSecretWord() {
