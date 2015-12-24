@@ -13,7 +13,7 @@ public class Aufgabe62 {
 		int counter = 0;
 		for(int[] anzahl: matrix){
 			
-			for(int i: anzahl){
+			for(@SuppressWarnings("unused") int i: anzahl){
 				counter++;
 			}
 			
